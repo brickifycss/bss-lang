@@ -1,0 +1,30 @@
+{
+  "name": "bss-lang",
+  "version": "0.1.0alpha",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "generate-docs": "cp README.md docs/index.md",
+    "test": "ospec",
+    "lint": "eslint ./lib",
+    "coverage": "istanbul cover --print both ospec",
+    "report-coverage": "codecovs"
+  },
+  "author": "Nicolas RAIBAUD",
+  "license": "MIT",
+  "files": [
+    "lib/index.js"
+  ],
+  "pre-commit": [
+    "generate-docs"
+  ],
+  "dependencies": {
+    "@brickify/m-pl": "^1.3.0",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "istanbul": "^0.4.5",
+    "ospec": "^1.4.0"
+  }
+}

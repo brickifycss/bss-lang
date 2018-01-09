@@ -1,0 +1,112 @@
+/* Injected comment */
+// Dev comment
+
+// @charset rule
+@charset "utf-8";
+
+// @namespace rule
+@namespace url(http://www.w3.org/1999/xhtml);
+
+// @fontface rule
+@font-face
+ font-family "Open Sans"
+ src url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff")
+
+// @page rule
+@page :first
+  margin 2cm
+
+// @import rule
+@import url('print.css') print;
+
+// Variables
+$colorRed red
+$grid-width 40px
+$gutter-width 10px
+
+//@fn grid-width($n)
+//return $n * $grid-width + ($n - 1) * $gutter-width
+
+//#sidebar
+//width fn:grid-width(5)
+
+// Simple rule
+.message:
+
+// Multiple rules
+div,
+p:
+  color green
+
+// Simple rule with declaration
+.message:
+  color red
+
+// Extend
+.warning = .message
+
+// nested properties
+body:
+  font 20px/24px fantasy
+    weight bold
+
+// nested properties
+body:
+  font -
+    size 10px
+
+@media (max-width: 800px)
+  a:
+    color blue
+    p:
+      color cyan
+    &:hover:
+      color orange
+
+// Media Query
+@media (max-width: 600px)
+  .sidebar:
+    display none
+
+// Keyframes
+@keyframes identifier
+  0%:
+    top 0
+    left 0
+  30%:
+    top 50px
+  68%, 72%:
+    left 50px
+  100%:
+    top 100px
+    left 100%
+
+// Evaluate
+body:
+{{ if(1 < 10) { return '  color red'; } }}
+
+// Import BSS file
+require(./example/import)
+
+input[type=text]:
+  color grey
+
+.block:
+  box-sizing  border-box
+  border      1px solid blue
+  margin      10px
+  padding     10px
+
+.block1, .block2:
+
+:hover:
+  display none
+
+a:hover:
+  color green
+
+::before:
+  color green
+
+a::before:
+  color green
