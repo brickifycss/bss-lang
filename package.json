@@ -1,6 +1,6 @@
 {
   "name": "bss-lang",
-  "version": "0.1.0alpha",
+  "version": "0.1.1alpha",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
